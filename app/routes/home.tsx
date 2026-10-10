@@ -6,6 +6,7 @@ import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 import { Separator } from "~/components/ui/separator";
 import { AdSlot, SiteHeader } from "~/components/site-header";
+import { SiteFooter } from "~/components/site-footer";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -49,7 +50,6 @@ export default function Home() {
           <AdSlot />
         </div>
         <div className="mb-3 flex items-center gap-3 text-[10px] font-bold tracking-[.12em] text-muted-foreground">
-          <span>RABU, 07 OKTOBER 2026</span>
           <Separator orientation="vertical" className="h-3" />
           <span className="text-foreground">PILIHAN REDAKSI</span>
           <span className="h-1.5 w-1.5 bg-highlight" />
@@ -94,7 +94,7 @@ export default function Home() {
           </article>
           <aside className="border-t border-t-highlight pt-5 lg:border-l lg:border-t-0 lg:border-l-border lg:pl-6 lg:pt-0">
             <div className="mb-4 flex items-center gap-3 text-xs font-bold tracking-widest">
-              PILIHAN HARI INI
+              OPINI
               <Separator className="flex-1" />
             </div>
             <Link
@@ -170,16 +170,15 @@ export default function Home() {
                 <div>
                   <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                     <Badge variant="secondary">{story.category}</Badge>
-                    <RiTimeLine className="size-3.5" />
-                    {story.time}
                   </div>
-                  <h3 className="mt-2 font-heading text-base font-semibold leading-snug sm:text-lg">
+                  <h3 className="mt-2 mb-2 font-heading text-base font-semibold leading-snug sm:text-lg">
                     <Link to="/search?query=terkini" className="hover:text-primary">
                       {story.title}
                     </Link>
                   </h3>
-                  <p className="mt-1 hidden text-xs text-muted-foreground sm:block">
-                    Fakta di balik perkembangan hari ini, disajikan dengan konteks utuh.
+                  <p className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                    <RiTimeLine className="size-3.5" />
+                    {story.time}
                   </p>
                 </div>
               </article>
@@ -236,13 +235,7 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
-      <footer className="bg-foreground text-background">
-        <div className="mx-auto flex min-h-20 max-w-7xl items-center gap-4 px-4 sm:px-6">
-          <span className="ml-auto text-[10px] tracking-widest text-background/60">
-            © 2026 PASIR MEDIA
-          </span>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

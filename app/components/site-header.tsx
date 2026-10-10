@@ -21,15 +21,6 @@ export function SiteHeader() {
   const [searchOpen, setSearchOpen] = useState(false);
   return (
     <>
-      <div className="border-b text-xs text-muted-foreground">
-        <div className="mx-auto flex h-8 max-w-7xl items-center justify-between px-4 sm:px-6">
-          <span>RABU, 7 OKTOBER 2026</span>
-          <span className="hidden sm:inline">Jernih melihat. Berani bicara.</span>
-          <Link className="text-foreground" to="/search?query=terkini">
-            Berita terkini →
-          </Link>
-        </div>
-      </div>
       <header className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         <Button
           variant="outline"
@@ -48,9 +39,6 @@ export function SiteHeader() {
           />
         </Link>
         <div className="flex items-center gap-2 sm:gap-4">
-          <span className="hidden text-[10px] tracking-widest text-muted-foreground lg:block">
-            EDISI INDONESIA
-          </span>
           <Button
             variant="outline"
             size="icon"
@@ -63,7 +51,7 @@ export function SiteHeader() {
             to="/#newsletter"
             className="hidden h-8 items-center bg-primary px-3 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/80 sm:inline-flex"
           >
-            IKUTI PASIR →
+            IKUTI PASIR → Akun IG
           </Link>
         </div>
       </header>
