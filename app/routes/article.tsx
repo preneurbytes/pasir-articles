@@ -106,8 +106,8 @@ export default function Article() {
             <AdSlot variant="rectangle" />
           </div>
         </aside>
-        <SiteFooter />
       </div>
     </div>
+    <SiteFooter />
   </main>;
 }
